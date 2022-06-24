@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:dodgerblue;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+header {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: seashell;
+    padding: 0.2rem;
+    box-shadow: 0 1px 20px 10px rgba(1, 16, 56, 0.2);
+}
+
+.header-title {
+    margin-left: 1rem;
+    font-family: 'Press Start 2P';
+}
+
+.header-info {
+    margin-right: 1rem;
+}
+
+footer {
+    align-self: stretch;
+    color: seashell;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
