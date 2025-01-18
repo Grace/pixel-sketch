@@ -1,5 +1,4 @@
 let gridContainer = document.querySelector('.grid-container');
-
 var selectedColor = 'black';
 
 function selectRandomColor() {
@@ -103,7 +102,8 @@ const shaderModeBtn = document.querySelector('#shader-mode-btn');
 shaderModeBtn.addEventListener('click', (e) => {
     shaderModeActive = true;
     rainbowModeActive = false;
-    
+    selectedColor = 'black'; // Reset selectedColor to black for shader mode
+
     let gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(item => item.removeEventListener('mouseover', changeColorOnHover));
     gridItems.forEach(item => item.removeEventListener('mouseover', randomColorOnHover));
