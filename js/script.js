@@ -11,14 +11,11 @@ function randomColorOnHover(e) {
     e.target.style.backgroundColor = selectRandomColor();
 }
 
+const rainbowModeBtn = document.querySelector('#rainbow-mode-btn');
 rainbowModeBtn.addEventListener('click', (e) => {
     let gridItems = document.querySelectorAll('.grid-item');
-	
-    // Remove any previously attached hover listeners before applying new ones
     gridItems.forEach(item => item.removeEventListener('mouseover', changeColorOnHover));
     gridItems.forEach(item => item.removeEventListener('mouseover', shadeColorOnHover));
-	
-    // Apply random color hover effect
     gridItems.forEach(item => item.addEventListener('mouseover', randomColorOnHover));
 });
 
@@ -93,13 +90,10 @@ pSBC.pSBCr=(d)=>{
         e.target.style.backgroundColor = pSBC(-0.1, e.target.style.backgroundColor);
   }
 
+  const shaderModeBtn = document.querySelector('#shader-mode-btn');
   shaderModeBtn.addEventListener('click', (e) => {
     let gridItems = document.querySelectorAll('.grid-item');
-    
-    // Remove any previously attached hover listeners before applying new ones
     gridItems.forEach(item => item.removeEventListener('mouseover', changeColorOnHover));
     gridItems.forEach(item => item.removeEventListener('mouseover', randomColorOnHover));
-    
-    // Apply shade color hover effect
     gridItems.forEach(item => item.addEventListener('mouseover', shadeColorOnHover));
 });
